@@ -19,7 +19,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 @errors
 async def play(_, message: Message):
 
-    lel = await message.reply("🔄 **Processing** sounds...")
+    lel = await message.reply("🔄 **Processing**...")
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
 
@@ -31,6 +31,13 @@ async def play(_, message: Message):
                         url="https://t.me/saibubo")
                    
                 ]
+                [
+                    InlineKeyboardButton(
+                        text="Add this Bot to your group!",
+                        url="https://t.me/KatarinaMusicRobot?startgroup=true")
+                   
+                ]
+
             ]
         )
 
@@ -59,7 +66,7 @@ async def play(_, message: Message):
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
-        photo="https://telegra.ph/file/6ee2a461d3136ce6e17d0.png",
+        photo="https://telegra.ph/file/bdb15e6a5917853f1be8a.jpg",
         reply_markup=keyboard,
         caption="▶️ **Playing** here the song requested by {}!".format(
         message.from_user.mention()
