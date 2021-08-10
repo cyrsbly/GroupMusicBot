@@ -31,12 +31,6 @@ async def play(_, message: Message):
                         url="https://t.me/saibubo")
                    
                 ]
-                [
-                    InlineKeyboardButton(
-                        text="Add this Bot to your group!",
-                        url="https://t.me/KatarinaMusicRobot?startgroup=true")
-                   
-                ]
             ]
         )
 
