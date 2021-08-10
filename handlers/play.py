@@ -37,7 +37,6 @@ async def play(_, message: Message):
                         url="https://t.me/KatarinaMusicRobot?startgroup=true")
                    
                 ]
-
             ]
         )
 
