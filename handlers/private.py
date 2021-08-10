@@ -17,7 +17,7 @@ Add me to your group and play music freely!**
             [
                 [
                     InlineKeyboardButton(
-                        "Bot By Sai!", url="https://t.me/saiiiiiiiii_i")
+                        "Bot By Mork!", url="https://t.me/ppnaravxt")
                   ],[ 
                     InlineKeyboardButton(
                         "➕ Add To Your Group ➕", url="https://t.me/KatarinaMusicRobot?startgroup=true"
