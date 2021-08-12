@@ -19,7 +19,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 @errors
 async def play(_, message: Message):
 
-    lel = await message.reply("🔄 **Processing**...")
+    lel = await message.reply("🔄 **Processing...**")
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
 
@@ -61,7 +61,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="https://telegra.ph/file/bdb15e6a5917853f1be8a.jpg",
         reply_markup=keyboard,
-        caption="▶️ **Playing** here the song requested by {}!".format(
+        caption="▶️ **Playing** here the song requested by {}!\n\nNeed help? Visit @saibubo for help.".format(
         message.from_user.mention()
         ),
     )
