@@ -27,8 +27,8 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="🔊 Channel",
-                        url="https://t.me/saibubo")
+                        text="Bot by Mork.",
+                        url="https://t.me/ppnaravxt_bot")
                    
                 ]
             ]
@@ -51,17 +51,17 @@ async def play(_, message: Message):
     elif url:
         file_path = await converter.convert(youtube.download(url))
     else:
-        return await lel.edit_text("❗ You did not give me anything to play!")
+        return await lel.edit_text("❗ You did not give me anything to play. Use #play for help.")
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
-        await lel.edit(f"#⃣ **Queued** at position {position}!")
+        await lel.edit(f"#⃣ **Queued** at position {position}!\n❗ Reminder: Max. of 3 song queue per group.")
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
         photo="https://telegra.ph/file/9b5b6a10b5bb1e0374c7e.jpg",
         reply_markup=keyboard,
-        caption="__'Is that fear I smell?'__\n\n▶️ **Playing** here the song requested by {}!\n\nNeed help? PM @ppnaravxt_bot for help.".format(
+        caption="__'Is that fear I smell?'__\n\n▶️ **Playing** here the song requested by {}!\n\nℹ `Need help?` PM @ppnaravxt_bot for help.\n🤖 Bot by @ppnaravxt.".format(
         message.from_user.mention()
         ),
     )
