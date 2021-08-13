@@ -59,7 +59,7 @@ async def play(_, message: Message):
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
-        photo="https://telegra.ph/file/ef1a90c18979409361eb5.jpg",
+        photo="https://telegra.ph/file/9b5b6a10b5bb1e0374c7e.jpg",
         reply_markup=keyboard,
         caption="__'Is that fear I smell?'__\n\n▶️ **Playing** here the song requested by {}!\n\nNeed help? PM @ppnaravxt_bot for help.".format(
         message.from_user.mention()
