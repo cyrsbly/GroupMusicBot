@@ -55,7 +55,7 @@ async def play(_, message: Message):
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
-        await lel.edit(f"#⃣ **Queued** at position {position}!\n❗ Reminder: Max. of 3 song queue per group.")
+        await lel.edit(f"#⃣ **Queued** at #{position}!\n❗ `Reminder: Max. of 3 song queue per group.`")
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
